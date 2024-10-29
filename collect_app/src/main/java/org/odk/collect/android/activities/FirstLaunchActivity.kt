@@ -93,9 +93,9 @@ class FirstLaunchActivity : LocalizedActivity() {
             }
 
             appName.text = String.format(
-                "%s %s",
+                "%s",
                 getString(org.odk.collect.strings.R.string.collect_app_name),
-                versionInformation.versionToDisplay
+//                versionInformation.versionToDisplay
             )
 
             dontHaveServer.apply {

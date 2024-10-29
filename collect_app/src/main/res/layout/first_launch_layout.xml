@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/collect_app_name"
-                android:src="@drawable/kobologo_symbol_cropped"
+                android:src="@drawable/notes"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +55,8 @@
                 app:layout_constraintBottom_toTopOf="@id/configure_manually_button"
                 app:layout_constraintEnd_toEndOf="@id/barrierEnd"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintWidth_min="wrap"/>
+                app:layout_constraintWidth_min="wrap"
+                android:visibility="gone"/>
 
             <org.odk.collect.androidshared.ui.multiclicksafe.MultiClickSafeMaterialButton
                 android:id="@+id/configure_manually_button"
@@ -63,7 +64,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_extra_small"
-                android:text="@string/configure_manually"
+                android:text="@string/start_hardcoded"
                 app:icon="@drawable/ic_outline_edit_24"
                 app:layout_constraintEnd_toEndOf="@id/barrierEnd"
                 app:layout_constraintStart_toStartOf="parent"

@@ -15,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "659901748622-iekvk6f4ct9g4iomgr3j5vvja9gp71l0.apps.googleusercontent.com",
+          "client_id": "614021744204-pe7pap9si6i873qrmgobhl06b2eb9o5r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "org.koboc.collect.android",
@@ -29,7 +29,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCkT_yrsm0Keynz2o_sOAs5N_ahmFmtJsU"
+          "current_key": "AIzaSyCTS4cSM7015jiixDOBFpmezTwZbMCRIos"
         }
       ],
       "services": {
@@ -42,7 +42,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "659901748622-n371b3mfc92hc42vka989l8ae8u6v1c8.apps.googleusercontent.com",
+              "client_id": "614021744204-pe7pap9si6i873qrmgobhl06b2eb9o5r.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -31,7 +31,8 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textAppearance="?textAppearanceSubtitle1"
-            tools:text="A project"/>
+            tools:text="A project"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/project_subtext"
@@ -41,6 +42,7 @@
             android:ellipsize="end"
             android:maxLines="2"
             android:textAppearance="@style/TextAppearance.Collect.Body2.MediumEmphasis"
-            tools:text="my.cool.project.com"/>
+            tools:text="my.cool.project.com"
+            android:visibility="gone"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -224,14 +224,14 @@ class MainMenuFragment(
 
     private fun initAppName(binding: MainMenuBinding) {
         binding.appName.text = String.format(
-            "%s %s",
+            "%s",
             getString(string.collect_app_name),
-            mainMenuViewModel.version
         )
 
         val versionSHA = mainMenuViewModel.versionCommitDescription
         if (versionSHA != null) {
             binding.versionSha.text = versionSHA
+            binding.versionSha.visibility = View.GONE
         } else {
             binding.versionSha.visibility = View.GONE
         }

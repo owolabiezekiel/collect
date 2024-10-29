@@ -78,6 +78,13 @@ public class ServerPreferencesFragment extends BaseProjectPreferencesFragment {
         passwordPreference.setOnBindEditTextListener(editText -> {
             editText.setFilters(new InputFilter[]{new ControlCharacterFilter()});
         });
+
+        serverUrlPreference.setEnabled(false);
+        serverUrlPreference.setDefaultValue("https://kf.kobotoolbox.org");
+        usernamePreference.setEnabled(false);
+        usernamePreference.setDefaultValue("theedoman");
+        passwordPreference.setEnabled(false);
+        passwordPreference.setDefaultValue("Police123");
     }
 
     private Preference.OnPreferenceChangeListener createChangeListener() {

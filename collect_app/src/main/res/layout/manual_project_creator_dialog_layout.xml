@@ -51,7 +51,10 @@
                     android:id="@+id/url_input_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:enabled="false"
+                    android:inputType="textPassword"
+                    android:text="@string/login_url_hardcoded"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +71,10 @@
                     android:id="@+id/username_input_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:enabled="false"
+                    android:inputType="textPassword"
+                    android:text="@string/username_hardcoded"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,7 +93,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:enabled="false"
+                    android:text="@string/password_hardcoded"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_extra_extra_small"
-        android:enabled="false"
+        android:enabled="true"
         android:text="@string/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

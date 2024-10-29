@@ -71,7 +71,7 @@ class MainMenuFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         currentProjectViewModel.currentProject.observe(viewLifecycleOwner) { (_, name): Project.Saved ->
             requireActivity().invalidateOptionsMenu()
-            requireActivity().title = name
+            requireActivity().title = "Edo state DN tracker"
         }
 
         val binding = MainMenuBinding.bind(view)

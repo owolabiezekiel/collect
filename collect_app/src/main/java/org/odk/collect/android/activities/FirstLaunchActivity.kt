@@ -10,10 +10,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import org.odk.collect.analytics.Analytics
 import org.odk.collect.android.analytics.AnalyticsEvents
+import org.odk.collect.android.configure.qr.AppConfigurationGenerator
 import org.odk.collect.android.databinding.FirstLaunchLayoutBinding
 import org.odk.collect.android.injection.DaggerUtils
 import org.odk.collect.android.mainmenu.MainMenuActivity
 import org.odk.collect.android.projects.ManualProjectCreatorDialog
+import org.odk.collect.android.R
+import org.odk.collect.android.projects.ProjectCreator
 import org.odk.collect.android.projects.ProjectsDataService
 import org.odk.collect.android.projects.QrCodeProjectCreatorDialog
 import org.odk.collect.android.version.VersionInformation
@@ -43,6 +46,12 @@ class FirstLaunchActivity : LocalizedActivity() {
 
     @Inject
     lateinit var scheduler: Scheduler
+
+    @Inject
+    lateinit var projectCreator: ProjectCreator
+
+    @Inject
+    lateinit var appConfigurationGenerator: AppConfigurationGenerator
 
     private val viewModel: FirstLaunchViewModel by viewModels {
         object : ViewModelProvider.Factory {
@@ -86,10 +95,20 @@ class FirstLaunchActivity : LocalizedActivity() {
             }
 
             configureManuallyButton.setOnClickListener {
-                DialogFragmentUtils.showIfNotShowing(
-                    ManualProjectCreatorDialog::class.java,
-                    supportFragmentManager
+//                DialogFragmentUtils.showIfNotShowing(
+//                    ManualProjectCreatorDialog::class.java,
+//                    supportFragmentManager
+//                )
+
+                // Create project directly
+                val settingsJson = appConfigurationGenerator.getAppConfigurationAsJsonWithServerDetails(
+                    getString(R.string.login_url_hardcoded),
+                    getString(R.string.username_hardcoded),
+                    getString(R.string.password_hardcoded)
                 )
+
+                projectCreator.createNewProject(settingsJson)
+                ActivityUtils.startActivityAndCloseAllOthers(this@FirstLaunchActivity, MainMenuActivity::class.java)
             }
 
             appName.text = String.format(

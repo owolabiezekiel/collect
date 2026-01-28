@@ -82,9 +82,9 @@ public class ServerPreferencesFragment extends BaseProjectPreferencesFragment {
         serverUrlPreference.setEnabled(false);
         serverUrlPreference.setDefaultValue("https://kc.kobotoolbox.org");
         usernamePreference.setEnabled(false);
-        usernamePreference.setDefaultValue("demander007");
+        usernamePreference.setDefaultValue("ishgem007");
         passwordPreference.setEnabled(false);
-        passwordPreference.setDefaultValue("@Notice007");
+        passwordPreference.setDefaultValue("ChangeIt333");
     }
 
     private Preference.OnPreferenceChangeListener createChangeListener() {

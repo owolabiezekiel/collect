@@ -80,11 +80,11 @@ public class ServerPreferencesFragment extends BaseProjectPreferencesFragment {
         });
 
         serverUrlPreference.setEnabled(false);
-        serverUrlPreference.setDefaultValue("https://kf.kobotoolbox.org");
+        serverUrlPreference.setDefaultValue("https://kc.kobotoolbox.org");
         usernamePreference.setEnabled(false);
-        usernamePreference.setDefaultValue("theedoman");
+        usernamePreference.setDefaultValue("demander007");
         passwordPreference.setEnabled(false);
-        passwordPreference.setDefaultValue("Police123");
+        passwordPreference.setDefaultValue("@Notice007");
     }
 
     private Preference.OnPreferenceChangeListener createChangeListener() {
